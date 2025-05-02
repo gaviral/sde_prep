@@ -1,0 +1,172 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+    <!-- Set global styles -->
+    <style>
+        .markmap {
+            position: relative;
+        }
+        .markmap > svg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<!-- colorFreezeLevel: -1 -->
+<!-- duration: 1000 -->
+<!-- maxWidth: 300 -->
+<!-- initialExpandLevel: -1 -->
+<!-- extraJS: [] -->
+<!-- extraCSS: [] -->
+<!-- zoom: true -->
+<!-- pan: true -->
+  
+<body>
+    <!-- Wrap Markdown source in `.markmap` elements -->
+    <div class="markmap">
+        <script type="text/template">
+---
+markmap:
+    spacingVertical: 20
+---
+- **DSA**
+    - **Intro**
+        - **Problem Solving**
+            - **Problem**
+                - **Definition**:
+                    - Question w/ initially **unknown solution method**
+                    - Initial state: **Cluelessness** (Expected/Natural)
+                - **Contrast: "Exercise"**
+                    - Solution **method is known** upfront
+                        - *Example*: Large number multiplication (uses grade school arithmetic)
+                    - Lacks **method mystery**
+                    - May be time-consuming/error-prone, but *how* is clear
+                - **Approach**
+                    - Requires: Sustained **Investigation**
+                    - Mechanism: Deploying **Algorithm Design Strategies** (Computational Problem-Solving Strategies)
+                        - **Domain-Specific** (e.g., Math, Science, Computational)
+                        - **Computational Strategies (Primary)**
+                            - **Brute Force**
+                            - **Decrease & Conquer**
+                            - **Divide & Conquer**
+                            - **Transform & Conquer**
+        - **Coding Fluency**
+            - Ability to **fluently transform** designed algorithm into **working code**
+            - Corresponds to **Part 2** of Ideal Interview (Code Implementation)
+            - Developed via **repetitive use** of **coding patterns** for speed.
+    - **Technical Interview** <!-- markmap: fold -->
+        - **Goal**: Test ability on **unseen problems**
+            - Assess **Problem Solving** (Algorithm Design)
+            - Assess **Coding Skills** (Implementation)
+        - **Process**:
+            - Given **unseen problem**
+            - Candidate deploys **Algorithm Design Strategies**
+            - Result: Design **correct** & **efficient** algorithm
+        - **Structure**:
+            - **Part 1**: Design Algorithm (**Problem Solving**)
+            - **Part 2**: Code Algorithm (**Coding Fluency**)
+        - **Ideal vs. Real Tension**
+            - **Ideal**: Allows time for **sustained investigation**.
+            - **Real**: **Timed test** -> Causes **anxiety** (like math tests).
+                - **Resolving Tension (Approaches)**
+                    - **1. Memorization**
+                        - **Method**: Memorize all (1700+) solutions -> Treat problems as exercises (hash table lookup).
+                        - **Drawbacks**:
+                            - **Impractical**: Too many questions, requires excessive time.
+                            - **Fails on Unseen**: Companies (e.g., Google) use novel questions -> Risk of "brain freeze". (Prepares for best case, not worst).
+                            - **No Skill Growth**: Doesn't improve engineering fundamentals; waste of prep time.
+                    - **2. Develop Problem Solving (Recommended Approach)**
+                        - **Goal**: Become a better **problem solver**.
+                        - **Benefits**:
+                            - Develops **Inner Confidence**: Antidote to anxiety through practice on unseen problems. (Prevents "brain freeze")
+                            - Improves **Engineering Skills**: Solidifies fundamentals, useful on the job.
+                        - **Method**:
+                            - Practice solving **unseen** questions.
+                            - Exposure to **popular** interview questions.
+                            - Cluster questions by **Coding Patterns**.
+                                - **Definition**: Similar code structure/logic for related problems.
+                                - **Benefit**: Reinforces patterns -> Faster, non-scratch coding during implementation.
+                        - **Mindset Changes Required**:
+                            - **Increase Concentration Time**:
+                                - Resist quick lookups (5-10 min).
+                                - Spend **significant time** (1-1.5 hrs min, potentially more) on *one* problem.
+                                - If stuck: Break, sleep on it, revisit.
+                                - If still stuck: Use **minimal hints**, not full solutions.
+                            - **Embrace Failure & Iteration**:
+                                - Expect **dead ends** when trying strategies.
+                                - Backtrack & try other paths (nature of investigation).
+                                - **Don't get discouraged** by failure.
+                                - **Learn** from failed attempts ("Why didn't this work?").
+                                - Dead ends can be **stepping stones** to optimal solutions.
+                                - *Analogy*: Hiking - wrong trails lead to backtracking, finding new paths to the peak.
+                            - **Positive Emotional Attitude**:
+                                - Towards **unseen questions**.
+                                - *Analogy*: Problem Solving ≈ Hiking/Exploring (unknown, getting lost is part of it) vs. Exercises ≈ Gym (repetitive).
+                        - **Recommended Study Strategy**:
+                            - **First Pass (New Problem)**:
+                                - Focus: **Problem Solving** ONLY.
+                                - Ignore time constraints initially (lengthy encounter expected).
+                                - **AVOID** looking up solutions -> Build problem-solving muscles.
+                            - **Subsequent Passes (Revisiting)**:
+                                - Focus: **Coding Fluency**.
+                                - Goal: Implement known algorithm **quickly** (no mystery).
+                        - **Interview Behavior**:
+                            - Even for familiar problems (exercises): **Show problem-solving path** to interviewer.
+                            - Do not just retrieve solution from memory.
+    - **Sorting** <!-- markmap: fold -->
+        - **Focus**:
+            - Apply **Algorithm Design Strategies** to actual interview problems (sorting context)
+            - **Code** the resulting algorithms
+        - **Problem Statement Example: Sort Array**
+            - **Task**: Given array `nums` (integers), sort in **ascending order**.
+            - **Input Details**:
+                - Can contain **duplicates**.
+                - Examples are **toy examples** (actual size likely larger).
+                - Integers are **primitives** -> **Stability not important**.
+            - **Constraints**: May be provided (relevance varies).
+            - **Classification**: **Exercise** (method is generally known, e.g., from **foundations** or prior knowledge).
+            - **Algorithm Options & Trade-offs**:
+                - **Simple (Generally Avoid)**:
+                    - **Selection Sort**: O(n^2). Likely **TLE**. Code available for review.
+                    - **Bubble Sort**: O(n^2). **Strongly Avoid**. Likely **TLE**. Code available for review.
+                    - **Insertion Sort**: O(n^2). Likely **TLE** (unless almost sorted/small). Code available for review.
+                        - **Useful Cases**: Almost Sorted / Very Small Array.
+                - **Efficient (n log n class)**:
+                    - **Merge Sort**:
+                        - **Strategy**: Divide & Conquer.
+                        - **Time**: O(n log n) worst-case. **Accepted**.
+                        - **Space**: Not In-Place (O(n) aux).
+                        - **Stability**: Stable (but irrelevant for primitives).
+                        - **Coding Target**: Under **10 mins**. (Components reusable). Code available for review.
+                    - **Quick Sort**:
+                        - **Strategy**: Divide & Conquer.
+                        - **Time**: O(n log n) avg (Randomized). **Accepted**.
+                        - **Space**: In-Place (O(log n) stack).
+                        - **Stability**: Not Stable.
+                        - **Performance**: Often empirically fastest.
+                        - **Coding Target**: Under **10 mins**. (Components reusable). Code available for review.
+                    - **Heap Sort**:
+                        - **Strategy**: Transform & Conquer.
+                        - **Time**: O(n log n) worst-case. **Accepted**.
+                        - **Space**: In-Place.
+                        - **Stability**: Not Stable.
+                        - **Coding Target**: Under **5 mins** (using library). Familiarize w/ library functions (heap/priority queue). Understand heap design once. Code available for review.
+                - **Specialized (Integer Keys)**:
+                    - **Counting Sort**: Code available for review (less critical).
+                    - **Radix Sort**:
+                        - Exploits integer structure (bit strings).
+                        - Often **fastest** for integer arrays.
+                        - Interview Frequency: Less common now.
+                        - Code available for review (less critical).
+                - **Choosing Algorithm (for Integers)**:
+                    - Stability irrelevant -> Merge Sort less compelling.
+                    - Fastest often **Radix Sort** (if applicable/known).
+                    - Good general choices: **Randomized Quick Sort** (avg speed), **Heap Sort** (worst-case guarantee, in-place).
+</script>
+</div>
+
+<!-- Load markmap -->
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"></script>
+</body>
