@@ -32,7 +32,7 @@ markmap:
     spacingVertical: 20
 ---
 - **DSA**
-    - **Intro**
+    - **Intro** <!-- markmap: fold -->
         - **Problem Solving**
             - **Problem**
                 - **Definition**:
@@ -115,7 +115,23 @@ markmap:
                         - **Interview Behavior**:
                             - Even for familiar problems (exercises): **Show problem-solving path** to interviewer.
                             - Do not just retrieve solution from memory.
-    - **Sorting** <!-- markmap: fold -->
+    - **Algorithm Analysis**
+        - **Components**:
+            - Explain **Correctness** verbally.
+            - Quantify **Efficiency** (Big O notation).
+        - **Focus**: **Worst-Case** Time Complexity
+            - **Primary Goal**: Achieve the most efficient **worst-case** algorithm possible.
+            - **Reasoning**:
+                - Average case analysis is generally **hard** (requires input distribution knowledge).
+                - Worst-case provides a guarantee.
+            - **Optimization Strategy**:
+                - Prioritize improving **worst-case** time.
+                - Avoid optimizations that only help average/friendly cases if worst-case isn't optimal. (Such optimizations are **bonus**, not required).
+        - **Exceptions (Use Average Case in Interviews)**:
+            - **QuickSort**: Analyze as O(n log n) average time.
+            - **Hash Table Operations** (Dictionaries): Analyze as O(1) average/amortized time. (Worst-case O(n) usually ignored in interviews).
+    - **Sorting**
+        - **Purpose**: Case study for Problem Solving Strategies & Algorithm Analysis.
         - **Focus**:
             - Apply **Algorithm Design Strategies** to actual interview problems (sorting context)
             - **Code** the resulting algorithms
